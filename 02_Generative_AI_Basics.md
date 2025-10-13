@@ -44,3 +44,4 @@ Console.WriteLine(result);
 | Transformer   | Neural network model for understanding text context. | GPT, BERT                  |
 | Training      | Learning patterns from large datasets.  | Model fine-tuning           |
 
+Next → [Generative AI Basics](https://github.com/azam123/GenerativeAISystemDesign/blob/main/02_Generative_AI_Basics.md)
