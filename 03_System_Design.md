@@ -52,6 +52,9 @@ Communication between components and agents is vital for efficiency:
 | Continuous Integration / Delivery | Automate updates & testing                   |
 
 
+<img width="1077" height="365" alt="image" src="https://github.com/user-attachments/assets/a9f0018a-1d4b-415a-a76e-f8ab92beebe5" />
+
+
 
 **🔐 Security in Generative AI Systems**
 
