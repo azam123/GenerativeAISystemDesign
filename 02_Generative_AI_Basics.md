@@ -30,19 +30,7 @@ Console.WriteLine(result);
 ```
 
 ⚙️ How Generative AI Works
-+-----------------------------+
-|      Training Data          |
-+-------------+---------------+
-              |
-              v
-+-----------------------------+
-|    AI Model Learns Patterns |
-+-------------+---------------+
-              |
-              v
-+-----------------------------+
-|     Generates New Output    |
-+-----------------------------+
+<img width="572" height="390" alt="image" src="https://github.com/user-attachments/assets/8b3aad71-47cd-4e22-8556-a4d3c3322307" />
 
 🔍 Core Concepts
 Concept	Description	Example
