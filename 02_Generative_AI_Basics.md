@@ -34,10 +34,13 @@ Console.WriteLine(result);
 
 <img width="572" height="390" alt="image" src="https://github.com/user-attachments/assets/8b3aad71-47cd-4e22-8556-a4d3c3322307" />
 
-🔍 Core Concepts
-Concept	Description	Example
-Prompt	The instruction or input text.	"Write a poem on Diwali"
-Tokenization	Converting text to numeric format.	NLP preprocessing
-Transformer	Neural network model for understanding text context.	GPT, BERT
-Training	Learning patterns from large datasets.	Model fine-tuning
+
+### 🧩 Core Concepts of Generative AI
+
+| Concept       | Description                             | Example                     |
+|---------------|-----------------------------------------|-----------------------------|
+| Prompt        | The instruction or input text.          | "Write a poem on Diwali"    |
+| Tokenization  | Converting text to numeric format.      | NLP preprocessing           |
+| Transformer   | Neural network model for understanding text context. | GPT, BERT                  |
+| Training      | Learning patterns from large datasets.  | Model fine-tuning           |
 
