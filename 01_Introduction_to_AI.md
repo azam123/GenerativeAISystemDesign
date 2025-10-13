@@ -76,4 +76,4 @@ class Program
 }
 
 
-Next → 02_Generative_AI_Basics.md
+Next → [Generative AI Basics](https://github.com/azam123/GenerativeAISystemDesign/blob/main/02_Generative_AI_Basics.md)
