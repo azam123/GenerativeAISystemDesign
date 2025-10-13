@@ -69,5 +69,5 @@ Security is critical because AI systems often handle sensitive data.
 | Monitoring          | Track unusual model usage or data access           |
 
 
-https://github.com/azam123/GenerativeAISystemDesign/blob/main/04_Advanced_Concepts.md
 
+Next → [Advance Concepts](https://github.com/azam123/GenerativeAISystemDesign/blob/main/04_Advanced_Concepts.md)
