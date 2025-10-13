@@ -12,3 +12,9 @@ A Generative AI system transforms input prompts into meaningful outputs (text, i
 | Postprocessing Layer   | Converts model output to usable format                        | Detokenization, text formatting      |
 | Output Layer           | Delivers the result to the user                                 | Web UI, API response                 |
 | Feedback Loop          | Improves model performance using collected data                | Logging, fine-tuning                 |
+
+
+**🖼️ System Flow Diagram**
+
+
+<img width="387" height="553" alt="image" src="https://github.com/user-attachments/assets/1164ac37-f0b6-4652-9c75-cc89c9587a4d" />
