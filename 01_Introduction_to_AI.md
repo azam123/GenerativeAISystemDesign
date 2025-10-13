@@ -74,6 +74,6 @@ class Program
         Console.WriteLine("AI model trained successfully!");
     }
 }
-```csharp
+```
 
 Next → [Generative AI Basics](https://github.com/azam123/GenerativeAISystemDesign/blob/main/02_Generative_AI_Basics.md)
