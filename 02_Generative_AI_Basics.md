@@ -29,7 +29,9 @@ var result = await api.Completions.CreateCompletionAsync("Once upon a time in Mu
 Console.WriteLine(result);
 ```
 
-⚙️ How Generative AI Works
+**⚙️ How Generative AI Works**
+
+
 <img width="572" height="390" alt="image" src="https://github.com/user-attachments/assets/8b3aad71-47cd-4e22-8556-a4d3c3322307" />
 
 🔍 Core Concepts
