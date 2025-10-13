@@ -10,17 +10,23 @@ Artificial Intelligence (AI) is the science of creating systems that can perform
 When you use Google Maps to find the fastest route, AI is predicting the best path.
 When Netflix recommends what to watch, AI is learning your taste.
 
-💡 Key Components of AI
-Component	Description	Example
-Learning	Acquiring information and rules for using it.	Machine learning models
-Reasoning	Drawing conclusions based on data.	Expert systems
-Perception	Understanding environment through inputs.	Image recognition
-Action	Taking intelligent actions.	Robotics, automation
+Key Components of AI
+| Component  | Description                             | Example                  |
+|------------|-----------------------------------------|--------------------------|
+| Learning   | Acquiring information and rules for using it. | Machine learning models |
+| Reasoning  | Drawing conclusions based on data.       | Expert systems           |
+| Perception | Understanding environment through inputs. | Image recognition       |
+| Action     | Taking intelligent actions.              | Robotics, automation     |
+
+
 🧮 Types of AI
-Type	Description	Example
-Narrow AI	AI designed for one specific task.	Siri, Alexa
-General AI	AI with human-like cognitive abilities.	Not yet achieved
-Super AI	Beyond human intelligence.	Theoretical stage
+| Type       | Description                          | Example          |
+|------------|--------------------------------------|-----------------|
+| Narrow AI  | AI designed for one specific task.    | Siri, Alexa     |
+| General AI | AI with human-like cognitive abilities. | Not yet achieved |
+| Super AI   | Beyond human intelligence.            | Theoretical stage |
+
+
 💻 Simple AI Example (Python)
 ```python
     from sklearn.tree import DecisionTreeClassifier
