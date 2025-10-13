@@ -1,17 +1,20 @@
 # 🎨 Understanding Generative AI
 
 🎨 Understanding Generative AI
-🌍 What is Generative AI?
+
+**🌍 What is Generative AI?**
 
 Generative AI is a branch of Artificial Intelligence that focuses on creating new data — text, images, videos, or music — similar to what humans can produce.
 
 It learns patterns from existing data and then generates new, similar content.
 
-🧠 Examples of Generative AI in Action
+**🧠 Examples of Generative AI in Action**
 Tool	Output	Description
 ChatGPT	Text	Writes stories, code, or answers
 DALL·E	Images	Generates images from text
 Jukebox	Music	Composes music based on prompts
+
+
 🧩 Simple Example (Python)
 ```python
 from transformers import pipeline
