@@ -68,3 +68,6 @@ Security is critical because AI systems often handle sensitive data.
 | Input Validation    | Sanitize user prompts to prevent injections        |
 | Monitoring          | Track unusual model usage or data access           |
 
+
+https://github.com/azam123/GenerativeAISystemDesign/blob/main/04_Advanced_Concepts.md
+
