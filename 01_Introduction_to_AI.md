@@ -22,18 +22,21 @@ Narrow AI	AI designed for one specific task.	Siri, Alexa
 General AI	AI with human-like cognitive abilities.	Not yet achieved
 Super AI	Beyond human intelligence.	Theoretical stage
 💻 Simple AI Example (Python)
-from sklearn.tree import DecisionTreeClassifier
-
-# Example: AI deciding if someone will buy a product
-X = [[25, 1], [30, 0], [45, 1], [35, 0]]  # age, interest flag
-y = ["Yes", "No", "Yes", "No"]
-
-model = DecisionTreeClassifier()
-model.fit(X, y)
-
-print(model.predict([[40, 1]]))
+```python
+    from sklearn.tree import DecisionTreeClassifier
+    
+    # Example: AI deciding if someone will buy a product
+    X = [[25, 1], [30, 0], [45, 1], [35, 0]]  # age, interest flag
+    y = ["Yes", "No", "Yes", "No"]
+    
+    model = DecisionTreeClassifier()
+    model.fit(X, y)
+    
+    print(model.predict([[40, 1]]))
 
 💻 Simple AI Example (.NET C#)
+
+```csharp
 using Microsoft.ML;
 using Microsoft.ML.Data;
 using System;
