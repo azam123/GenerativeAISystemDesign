@@ -1,0 +1,1 @@
+namespace UnitTests; public class CostProviderTests { [Fact] public void Placeholder() => Assert.True(true); }
