@@ -1,0 +1,15 @@
+using Application; using Domain; using Infrastructure; using Serilog;
+var builder=WebApplication.CreateBuilder(args);
+builder.Host.UseSerilog((ctx,lc)=>lc.WriteTo.Console().ReadFrom.Configuration(ctx.Configuration));
+builder.Services.AddHealthChecks(); builder.Services.AddAuthorization(); builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer",o=>{o.Authority=builder.Configuration["Authentication:Authority"];o.Audience=builder.Configuration["Authentication:Audience"];});
+builder.Services.AddSingleton<IArchitectureAgent,DeterministicArchitectureAgent>(); builder.Services.AddSingleton<ICloudCostProvider,AzureCostProvider>(); builder.Services.AddSingleton<ICloudCostProvider,AwsCostProvider>(); builder.Services.AddSingleton<ICloudCostProvider,GcpCostProvider>(); builder.Services.AddSingleton<ISecurityAgent,SecurityAgent>(); builder.Services.AddSingleton<IInterviewAgent,InterviewAgent>(); builder.Services.AddSingleton<IAdrGeneratorAgent,AdrGeneratorAgent>(); builder.Services.AddSingleton<IKnowledgeAgent,KnowledgeAgent>(); builder.Services.AddSingleton<IServiceBus,InMemoryServiceBus>();
+var app=builder.Build(); app.UseSerilogRequestLogging(); app.UseAuthentication(); app.UseAuthorization(); app.MapHealthChecks("/health");
+app.MapPost("/api/architecture/generate",(ArchitectureRequest req,IArchitectureAgent agent,CancellationToken ct)=>agent.GenerateAsync(req,ct)).RequireAuthorization();
+app.MapPost("/api/cost-estimation",(CostEstimationRequest req,IEnumerable<ICloudCostProvider> ps,CancellationToken ct)=>ps.Single(p=>p.Provider==req.Provider).EstimateAsync(req,ct)).RequireAuthorization();
+app.MapPost("/api/security-review",(SecurityReviewRequest req,ISecurityAgent agent,CancellationToken ct)=>agent.ReviewAsync(req.Architecture,req.Frameworks,ct)).RequireAuthorization();
+app.MapPost("/api/interview-coach",(InterviewRequest req,IInterviewAgent agent,CancellationToken ct)=>agent.CoachAsync(req.Level,req.Scenario,ct)).RequireAuthorization();
+app.MapPost("/api/adr/generate",(AdrRequest req,IAdrGeneratorAgent agent,CancellationToken ct)=>agent.GenerateAsync(req.Topic,req.Context,ct)).RequireAuthorization("Architect");
+app.MapPost("/api/rag/upload",()=>Results.Accepted("/api/history",new{status="queued"})).RequireAuthorization("Architect");
+app.MapPost("/api/rag/query",(RagQuery req,IKnowledgeAgent agent,CancellationToken ct)=>agent.QueryAsync(req.Query,req.Metadata,ct)).RequireAuthorization();
+app.MapGet("/api/history",()=>new[]{new{type="architecture",createdAt=DateTimeOffset.UtcNow}}).RequireAuthorization(); app.MapGet("/api/dashboard",()=>new{architectures=12,adrs=8,securityReviews=5,costEstimates=9}).RequireAuthorization(); app.Run();
+record SecurityReviewRequest(string Architecture,string[] Frameworks); record InterviewRequest(string Level,string Scenario); record AdrRequest(string Topic,string Context); record RagQuery(string Query,Dictionary<string,string>? Metadata);

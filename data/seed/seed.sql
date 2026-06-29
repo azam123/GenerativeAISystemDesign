@@ -1,0 +1,1 @@
+insert into adrs (id, version, title) values ('00000000-0000-0000-0000-000000000001', 1, 'Adopt Clean Architecture');

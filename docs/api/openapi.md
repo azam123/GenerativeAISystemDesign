@@ -1,0 +1,10 @@
+# API Endpoints
+- `POST /api/architecture/generate`
+- `POST /api/cost-estimation`
+- `POST /api/security-review`
+- `POST /api/interview-coach`
+- `POST /api/adr/generate`
+- `POST /api/rag/upload`
+- `POST /api/rag/query`
+- `GET /api/history`
+- `GET /api/dashboard`

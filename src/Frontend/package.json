@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "latest",
+    "@xyflow/react": "latest",
+    "mermaid": "latest",
+    "next": "15.3.4",
+    "react": "latest",
+    "react-dom": "latest",
+    "lucide-react": "latest",
+    "tailwindcss": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest"
+  }
+}
